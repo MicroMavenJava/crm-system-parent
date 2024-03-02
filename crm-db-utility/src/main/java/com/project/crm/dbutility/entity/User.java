@@ -1,9 +1,7 @@
 package com.project.crm.dbutility.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -14,7 +12,14 @@ public class User {
 
     private String username;
     private String password;
-    private String roles;
+    @ManyToMany
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role")
+    )
+    private Set<Role> roles;
+
 
     // getters and setters
 
