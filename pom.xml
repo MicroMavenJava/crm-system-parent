@@ -12,6 +12,7 @@
         <module>crm-auth-service</module>
         <module>crm-resource-service</module>
         <module>crm-db-utility</module>
+        <module>crm-user-management</module>
     </modules>
 
     <properties>
