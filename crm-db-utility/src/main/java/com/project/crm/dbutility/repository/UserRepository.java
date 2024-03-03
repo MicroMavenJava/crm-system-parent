@@ -1,9 +1,11 @@
 package com.project.crm.dbutility.repository;
 
+import com.project.crm.dbutility.entity.Role;
 import com.project.crm.dbutility.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Set;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
@@ -14,7 +16,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmail(String email);
 
     // Find users by a certain role
-    List<User> findByRoles_Name(String roleName);
+    Set<Role> findByRoles_Name(String roleName);
 
 
 }

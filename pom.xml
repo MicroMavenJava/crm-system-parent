@@ -8,6 +8,11 @@
     <artifactId>crm-system-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.1</version>
+    </parent>
     <modules>
         <module>crm-auth-service</module>
         <module>crm-resource-service</module>
@@ -16,26 +21,12 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>2.6.1</spring.boot.version>
+        <java.version>11</java.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Spring Boot dependencies -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- Add other common dependencies as needed -->
-
-        </dependencies>
-    </dependencyManagement>
     
 </project>
