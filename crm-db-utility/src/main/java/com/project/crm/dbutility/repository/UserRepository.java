@@ -3,10 +3,13 @@ package com.project.crm.dbutility.repository;
 import com.project.crm.dbutility.entity.Role;
 import com.project.crm.dbutility.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Set;
 
+
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // Find a user by username

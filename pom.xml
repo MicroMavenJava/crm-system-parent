@@ -18,6 +18,7 @@
         <module>crm-resource-service</module>
         <module>crm-db-utility</module>
         <module>crm-user-management</module>
+        <module>crm-base-model</module>
     </modules>
 
     <properties>
